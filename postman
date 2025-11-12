@@ -1,3 +1,27 @@
+For create user 
+http://localhost:8080/api/auth/create
+
+{
+    "userName":"kartikjhadbg@gmail.com",
+    "password":"kartik"
+}
+
+
+=================================================================================
+
+
+For User Login to get Token 
+http://localhost:8080/api/auth/login
+
+
+{
+    "name":"kartikjhadbg@gmail.com",
+    "password":"kartik"
+}
+
+
+===================================================================================================================
+
 For save delares with vechile
 //http://localhost:8080/api/dealers  
 
@@ -19,7 +43,8 @@ For save delares with vechile
   ]
 }
 
-
+===============================================================================================================
+For to get premium vechile delear
 2.http://localhost:8080/api/vehicles/premium
 
 
