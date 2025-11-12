@@ -1,0 +1,27 @@
+For save delares with vechile
+//http://localhost:8080/api/dealers  
+
+{
+  "name": "HERO MOTORS",
+  "email": "heromotors@example.com",
+  "subscriptionType": "PREMIUM",
+  "vehicles": [
+    {
+      "model": "Hero ZX",
+      "price": 900000.0,
+      "status": "AVAILABLE"
+    },
+    {
+      "model": "Hero LX",
+      "price": 950000.0,
+      "status": "SOLD"
+    }
+  ]
+}
+
+
+2.http://localhost:8080/api/vehicles/premium
+
+
+
+
