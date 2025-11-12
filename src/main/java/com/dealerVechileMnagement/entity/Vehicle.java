@@ -1,6 +1,7 @@
 package com.dealerVechileMnagement.entity;
 
 import com.dealerVechileMnagement.utility.VehicleStatus;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -23,6 +24,7 @@ public class Vehicle {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "dealer_id")
+    @JsonBackReference
     private Dealer dealer;
 
     private String model;

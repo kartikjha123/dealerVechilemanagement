@@ -19,7 +19,7 @@ public class VehicleController {
     private VehicleService vehicleService;
 
     @GetMapping("/premium")
-    public ResponseEntity<List<Vehicle>> getPremiumVehicles() {
+    public ResponseEntity<?> getPremiumVehicles() {
         return ResponseEntity.ok(vehicleService.getVehiclesOfPremiumDealers());
     }
 }
