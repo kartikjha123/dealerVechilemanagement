@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KJ Software Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 30px 20px;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+    #hero {
+      background: linear-gradient(to right, #0062E6, #33AEFF);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+    }
+    #hero h2 {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+    .btn {
+      background: white;
+      color: #007BFF;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    .btn:hover {
+      background: #f1f1f1;
+    }
+    #services {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 60px 20px;
+      background-color: #fff;
+    }
+    .service {
+      background: #f9f9f9;
+      border-radius: 10px;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service:hover {
+      transform: translateY(-5px);
+    }
+    .service h3 {
+      color: #007BFF;
+      margin-bottom: 10px;
+    }
+    #contact {
+      background: #222;
+      color: white;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    #contact a {
+      color: #33AEFF;
+      text-decoration: none;
+    }
+    form {
+      margin-top: 30px;
+    }
+    form input, form textarea {
+      width: 90%;
+      max-width: 500px;
+      padding: 12px;
+      margin: 10px auto;
+      border: none;
+      border-radius: 8px;
+      display: block;
+      font-size: 16px;
+    }
+    button {
+      background: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>KJ Software Solutions</h1>
+    <p>Java Developer | 3+ Years of Experience in Scalable Web Applications</p>
+  </header>
+
+  <section id="hero">
+    <h2>Building Scalable and Secure Web Applications</h2>
+    <p>Expert in Spring Boot, Struts2, REST API, Microservices, and API Integrations</p>
+    <p>Delivering enterprise-grade solutions with robust security and cloud deployment</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </section>
+
+  <section id="services">
+    <div class="service">
+      <h3>Backend Development</h3>
+      <p>Spring Boot, Struts2, REST APIs, Microservices, Web Applications</p>
+    </div>
+    <div class="service">
+      <h3>Database Management</h3>
+      <p>MySQL, PostgreSQL, JPA, Hibernate, NoSQL Databases</p>
+    </div>
+    <div class="service">
+      <h3>Security & Authentication</h3>
+      <p>JWT, OAuth, Encryption, API Security, Secure Web Applications</p>
+    </div>
+    <div class="service">
+      <h3>Cloud & Deployment</h3>
+      <p>AWS, Docker, Kubernetes, CI/CD, Scalable API Solutions</p>
+    </div>
+    <div class="service">
+      <h3>API Development</h3>
+      <p>Third-Party API Integration, Payment Gateway, External Service Connectivity</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's discuss how I can help build and optimize your software solutions.</p>
+    <p><strong>Email:</strong> <a href="mailto:kartikjhadbg@gmail.com">kartikjhadbg@gmail.com</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+919576122752">+91 9576122752</a></p>
+
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script>
+      document.getElementById("contactForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        emailjs.init("yh9bRGSMtLD2tkpZH");
+
+        const templateParams = {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          message: document.getElementById("message").value
+        };
+
+        emailjs.send("service_ubutrsk", "template_kki1y7w", templateParams)
+          .then(response => {
+            alert("Email sent successfully!");
+          })
+          .catch(error => {
+            console.error("Error sending email:", error);
+            alert("Error: " + error.text);
+          });
+      });
+    </script>
+  </section>
+
+</body>
+</html>
